@@ -1,5 +1,5 @@
 ﻿using System;
-
+using HelloWorld.Views;
 using Xamarin.Forms;
 
 namespace HelloWorld
@@ -19,9 +19,9 @@ namespace HelloWorld
                 DependencyService.Register<CloudDataStore>();
 
             if (Device.RuntimePlatform == Device.iOS)
-                MainPage = new MainPage();
+                MainPage = new MyPage();
             else
-                MainPage = new NavigationPage(new MainPage());
+                MainPage = new NavigationPage(new MyPage());
         }
     }
 }
